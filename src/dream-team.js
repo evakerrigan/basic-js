@@ -17,7 +17,7 @@ function createDreamTeam(members) {
   //throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 
-  for (i = 0; i < members.length; i++) {
+/*  for (i = 0; i < members.length; i++) {
     if (members[i] === !'string') {
       return false;
     }
@@ -27,7 +27,15 @@ function createDreamTeam(members) {
       return teamName;
     }
   }
+*/
 
+  if (!Array.isArray(members)) return false
+
+  const names = members.filter(elements => typeof elements === 'string');
+
+  const teamName = names.map(names => names.trim()[0].toUpperCase()).sort().join('')
+  
+  return teamName;
   
 
 }
