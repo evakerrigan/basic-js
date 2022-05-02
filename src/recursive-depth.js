@@ -23,13 +23,23 @@ class DepthCalculator {
       return 1;
     }
   }*/
-  calculateDepth = function calculateDepth(arr){
+  /*calculateDepth = function calculateDepth(arr){
     if(arr.filter(el => Array.isArray(el)).length != 0){
        return 1 + calculateDepth([].concat(...arr.filter(el => Array.isArray(el))));
     } else {
        return 1;
     }
- }
+ }*/
+ 
+ calculateDepth(arr){
+  if(arr.filter(el => Array.isArray(el)).length != 0){
+     return 1 + this.calculateDepth([].concat(...arr.filter(el => Array.isArray(el))));
+  } else {
+     return 1;
+  }
+}
+
+
 
 
 }
