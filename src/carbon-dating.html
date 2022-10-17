@@ -1,23 +1,18 @@
-const { NotImplementedError } = require('../extensions/index.js');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
 
 const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
-/**
- * Determine the age of archeological find by using
- * given MODERN_ACTIVITY and HALF_LIFE_PERIOD values
- * 
- * @param {String} sampleActivity string representation of current activity 
- * @return {Number | Boolean} calculated age in years or false
- * in case of incorrect sampleActivity
- *
- * @example
- * 
- * dateSample('1') => 22387
- * dateSample('WOOT!') => false
- *
- */
- function dateSample(sampleActivity) {
+function dateSample(sampleActivity) {
 
   if (typeof sampleActivity !== 'string') {
 
@@ -73,7 +68,17 @@ console.log('typeof sampleActivity =', typeof sampleActivity);
 
 }
 
+console.log("'11' //2564", dateSample('11')) //2564
+console.log("3 //false", dateSample(3)) //false
+console.log("'3.142' //12923", dateSample('3.142')) //12923
+console.log("'-52892' //false", dateSample('-52892')) //false
+console.log("'WOOT!' //false", dateSample('WOOT!')) //false
+console.log("'9000' //false", dateSample('9000')) //false
+console.log("'0' //false", dateSample('0')) //false
+console.log("'3.142' //12926", dateSample('3.142')) //12926
+console.log("undefined //false", dateSample(undefined)) //false
 
-module.exports = {
-  dateSample
-};
+
+  </script>
+</body>
+</html>
